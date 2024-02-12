@@ -6,17 +6,17 @@ use Core\Database;
 $db = App::resolve(Database::class);
 
 $heading = 'Note';
-
 $currentUserId = 1;
 
 $query = 'select * from notes where id = :id';
 $note = $db->query($query, [
-    ':id' => $_GET['id']
+    ':id' => $_POST['id']
 ])->findOrFail();
 
 authorize($note['user_id'] !== $currentUserId);
 
-view('notes/show.view.php', [
-    'heading' => $heading,
-    'note' => $note
+$db->query('delete from notes where id = :id', [
+    ':id' => $_POST['id'],
 ]);
+header('Location: /notes');
+exit();

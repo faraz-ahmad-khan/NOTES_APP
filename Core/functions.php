@@ -1,4 +1,6 @@
 <?php
+
+use Core\Response;
     function dd($value){
         echo "<pre>";
         var_dump($value);
@@ -8,6 +10,12 @@
 
     function urlIs($value){
         return $_SERVER['REQUEST_URI'] == $value;
+    }
+
+    function abort($status = 404){ 
+        http_response_code($status);
+        require base_path("views/$status.php");
+        exit();
     }
 
     function authorize($condition, $status = Response::FORBIDDEN ){

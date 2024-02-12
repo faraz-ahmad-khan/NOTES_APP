@@ -1,5 +1,5 @@
-<?php require base_path('partials/head.php') ?>
-<?php require base_path('partials/nav.php') ?>
+<?php require base_path('views/partials/head.php') ?>
+<?php require base_path('views/partials/nav.php') ?>
 
 <main class="flex align-center items-center h-[80vh]">
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 text-center">
@@ -10,4 +10,4 @@
     </div>
 </main>
 
-<?php require base_path('partials/footer.php') ?>
+<?php require base_path('views/partials/footer.php') ?>
