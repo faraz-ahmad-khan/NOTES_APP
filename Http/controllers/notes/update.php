@@ -7,7 +7,7 @@ use Core\Database;
 $db = App::resolve(Database::class);
 
 $heading = 'Edit Note';
-$currentUserId = 1;
+$currentUserId = $_SESSION['user']['id'];
 
 $query = 'select * from notes where id = :id';
 

@@ -4,7 +4,7 @@
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-    <h6 class="text-[2rem]">Hello. Welcome to the Homepage</h6>
+    <h6 class="text-[2rem]">Hello. Welcome <?= $username ?></h6>
     </div>
 </main>
 

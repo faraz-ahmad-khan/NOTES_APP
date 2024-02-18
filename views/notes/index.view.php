@@ -5,9 +5,9 @@
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
     <?php if($notes) : ?>
-     <ul class="list-disc bg-white w-1/3 rounded-lg px-8 py-2 border-solid border-[1px] border-[#b7b7b7]">
+     <ul class="list-[lower-roman] w-1/3 px-8 py-2">
         <?php foreach($notes as $note): ?>
-            <li class="text-violet-800 hover:bg-violet-800 hover:text-white px-2 py-2 font-normal border-solid border-b-[1px] border-[#b7b7b7]">
+            <li class="text-violet-800 hover:text-violet-700 hover:underline px-2 py-2 font-normal">
                 <a href="/note?id=<?= $note['id'] ?>" class="">
                     <?=htmlspecialchars($note['title'])?>
                 </a>
